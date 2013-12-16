@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.14)  16 DEC 2013 16:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.14)  16 DEC 2013 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -22,6 +22,10 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -98,12 +102,12 @@ Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
 \l_tmpb_skip=\skip46
 \g_tmpa_skip=\skip47
 \g_tmpb_skip=\skip48
-\c_zero_muskip=\muskip10
-\c_max_muskip=\muskip11
-\l_tmpa_muskip=\muskip12
-\l_tmpb_muskip=\muskip13
-\g_tmpa_muskip=\muskip14
-\g_tmpb_muskip=\muskip15
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3keys.sty
 Package: l3keys 2013/07/28 v4581 L3 Experimental key-value interfaces
@@ -425,6 +429,15 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen149
 \Gin@req@width=\dimen150
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
 (./ai3reports.aux)
 \openout1 = `ai3reports.aux'.
 
@@ -440,7 +453,11 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 17.
 
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
@@ -455,12 +472,12 @@ File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
 \scratchbox=\box48
 \nofMPsegments=\count136
 \nofMParguments=\count137
-\everyMPshowfont=\toks17
+\everyMPshowfont=\toks19
 \MPscratchCnt=\count138
 \MPscratchDim=\dimen152
 \MPnumerator=\count139
 \makeMPintoPDFobject=\count140
-\everyMPtoPDFconversion=\toks18
+\everyMPtoPDFconversion=\toks20
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -517,6 +534,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 18.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 Package epstopdf Info: Source file: <nat64.eps>
 (epstopdf)                    date: 2013-12-16 15:49:22
 (epstopdf)                    size: 248802 bytes
@@ -538,27 +557,60 @@ Package pdftex.def Info: nat64-eps-converted-to.pdf used on input line 50.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 57.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (93.0pt too wide) in paragraph at lines 70--70
+[]\OT1/pcr/m/n/10 all tcp 202.249.25.29:58370 (2001:d30:112:0:2c11:f6b3:a918:6b
+a[37456]) ->[] 
+ []
+
+
+Overfull \hbox (129.0pt too wide) in paragraph at lines 71--71
+[]   \OT1/pcr/m/n/10 69.171.235.16:443 (2001:d30:101:624::45ab:eb10[443]) ESTAB
+LISHED:ESTABLISHED[] 
+ []
+
+
+Overfull \hbox (93.0pt too wide) in paragraph at lines 72--72
+[]\OT1/pcr/m/n/10 all tcp 202.249.25.29:56196 (2001:d30:112:0:2c11:f6b3:a918:6b
+a[37457]) ->[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 73--73
+[]   \OT1/pcr/m/n/10 69.171.235.16:443 (2001:d30:101:624::45ab:eb10[443]) FIN_W
+AIT_2:FIN_WAIT_2[] 
+ []
+
+
+Overfull \hbox (27.2368pt too wide) in paragraph at lines 76--78
+[]\OT1/ptm/m/n/10 Above ses-sion tell us that a client which has IPv6 ad-dress 
+2001:d30:112:0:2c11:f6b3:a918:6ba
+ []
+
 [1
 
 {/Users/dikshie/Library/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.m
 ap}] [2 <./nat64-eps-converted-to.pdf>] (./ai3reports.aux) ) 
 Here is how much of TeX's memory you used:
- 9515 strings out of 493308
- 212401 string characters out of 6137815
- 218918 words of memory out of 5000000
- 12855 multiletter control sequences out of 15000+600000
- 10101 words of font info for 38 fonts, out of 8000000 for 9000
+ 9698 strings out of 493308
+ 215085 string characters out of 6137815
+ 222870 words of memory out of 5000000
+ 13017 multiletter control sequences out of 15000+600000
+ 16600 words of font info for 46 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,6n,37p,10458b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on ai3reports.pdf (2 pages, 91057 bytes).
+{/usr/local/texlive
+/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dis
+t/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb>
+Output written on ai3reports.pdf (2 pages, 84547 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

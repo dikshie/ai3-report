@@ -1,11 +1,11 @@
 \documentclass{article}
-
+\usepackage{url}
 \usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
 \usepackage{graphicx} % Required for the inclusion of images
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
-
-%\usepackage{times} % Uncomment to use the Times New Roman font
+\usepackage{verbatim}
+\usepackage{times} % Uncomment to use the Times New Roman font
 
 %----------------------------------------------------------------------------------------
 %	DOCUMENT INFORMATION
@@ -57,10 +57,24 @@ We use OpenBSD because it is in kernel level natively support and simple configu
 We also prepare backup nat64 server using Linux which uses jool kernel module from \url{https://github.com/NICMx/NAT64} in case we have trouble with OpenBSD in the future. 
 
 Figure \ref{fig:nat64} shows how the host which has IPv6 global address and private IPv4 address can access IPv4 Internet via sfc-nat6. 
-If host wants to access IPv4 website, totd daemon in server will help to translate IPv4 address of destination into IPv6 address.
+If host wants to access IPv4 website, totd daemon in server will help to translate IPv4 address of destination into IPv6 address. 
+Since totd only translates IPv4 address to IPv6 address, we still need Bind for naming/DNS resolution. 
+In this case totd listen in port 53 and Bind will listen on port 5353. 
 AI3 uses 2001:d30:101:624::/96 IPv6 address pool for translation purpose.  
-Since we added IPv6 static routing in sfc-gate2, that every 2001:d30:101:624::/96 prefix must go trough sfc-nat64, the request from server will forward to sfc-nat64 server. 
+Since we added IPv6 static routing in sfc-gate2, that every 2001:d30:101:624::/96 prefix must go trough sfc-nat64, the request from server will be forwarded to sfc-nat64 server. 
+sfc-nat64 server translates IPv6 address destination to IPv4 address which is last 4 bit in our  2001:d30:101:624::/96 prefix.   
 
+An example of session that recorded in sfc-nat64.ai3.net is shown as follows:  
+\begin{verbatim}
+# pfctl -ss     
+all tcp 202.249.25.29:58370 (2001:d30:112:0:2c11:f6b3:a918:6ba[37456]) -> 
+   69.171.235.16:443 (2001:d30:101:624::45ab:eb10[443]) ESTABLISHED:ESTABLISHED
+all tcp 202.249.25.29:56196 (2001:d30:112:0:2c11:f6b3:a918:6ba[37457]) -> 
+   69.171.235.16:443 (2001:d30:101:624::45ab:eb10[443]) FIN_WAIT_2:FIN_WAIT_2
+\end{verbatim}
+
+Above session tell us that a client which has IPv6 address 2001:d30:112:0:2c11:f6b3:a918:6ba want to access IPv4 web page with IPv4 address 69.171.235.16 and port 443 (HTTP SSL).  
+IPv6 address that used for translation is 2001:d30:101:624::45ab:eb10.  
 
 
 
