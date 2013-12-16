@@ -61,10 +61,10 @@ If host wants to access IPv4 website, totd daemon in server will help to transla
 Since totd only translates IPv4 address to IPv6 address, we still need Bind for naming/DNS resolution. 
 In this case totd listen in port 53 and Bind will listen on port 5353. 
 AI3 uses 2001:d30:101:624::/96 IPv6 address pool for translation purpose.  
-Since we added IPv6 static routing in sfc-gate2, that every 2001:d30:101:624::/96 prefix must go trough sfc-nat64, the request from server will be forwarded to sfc-nat64 server. 
-sfc-nat64 server translates IPv6 address destination to IPv4 address which is last 4 bit in our  2001:d30:101:624::/96 prefix.   
+Since we added IPv6 static routing in sfc-gate2, every 2001:d30:101:624::/96 prefix will go trough sfc-nat64 and the request from server will be forwarded to sfc-nat64 server. 
+Finally, sfc-nat64 server translates IPv6 address destination to IPv4 address which is last 4 bit in our  2001:d30:101:624::/96 prefix.   
 
-An example of session that recorded in sfc-nat64.ai3.net is shown as follows:  
+An example of nat64 translation session that recorded in sfc-nat64.ai3.net is shown as follows:  
 \begin{verbatim}
 # pfctl -ss     
 all tcp 202.249.25.29:58370 (2001:d30:112:0:2c11:f6b3:a918:6ba[37456]) -> 
