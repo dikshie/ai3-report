@@ -54,7 +54,7 @@ Because only a new NAT64 server has big significance in our operation, we will d
 
 Due to un-stable of old sfc-nat64.ai3.net operation which uses naptd, we decided to change nat64 implementation from natptd to OpenBSD's nat64 implementation.  
 We use OpenBSD because it is in kernel level natively support and simple configuration of translator in OpenBSD's packet filter (pf).
-We also prepare backup nat64 server using Linux which uses jool kernel module from \url{https://github.com/NICMx/NAT64} in case we have trouble with OpenBSD in the future. 
+We also prepared backup nat64 server using Linux which uses jool kernel module from \url{https://github.com/NICMx/NAT64} in case we have trouble with OpenBSD in the future. 
 
 Figure \ref{fig:nat64} shows how the host which has IPv6 global address and private IPv4 address can access IPv4 Internet via sfc-nat6. 
 If host wants to access IPv4 website, totd daemon in server will help to translate IPv4 address of destination into IPv6 address. 
@@ -76,6 +76,13 @@ all tcp 202.249.25.29:56196 (2001:d30:112:0:2c11:f6b3:a918:6ba[37457]) ->
 Above session tell us that a client which has IPv6 address 2001:d30:112:0:2c11:f6b3:a918:6ba want to access IPv4 web page with IPv4 address 69.171.235.16 and port 443 (HTTP SSL).  
 IPv6 address that used for translation is 2001:d30:101:624::45ab:eb10.  
 
+\section{Publication}
+In 20013, we have one publication: \\
+Mohamad Dikshie Fauzie and Achmad Husni Thamrin and Jun Murai, Energy Consumption in Peer-Assisted CDN, International Journal of Advanced Research in Computer Science, vol.4, no.9, 2013.  \\
+
+In this research we did analytical analysis of energy consumption in peer-assisted CDN, where a peer is a user that participate in a P2P network to assist content delivery.  
+We presents two types of services: live streaming and online storage.  
+For live streaming service, we e found that delegating workloads to peers can save up to 11% of the energy in the data center compared to the pure CDN architecture, while the savings in the total energy consumption of the system is less than 1%. For the peer-assisted online storage, we looked into several server bandwidth allocation strategies for peers of a peer-assisted online storage service and in the best case found that the energy savings of the data center and of the system are 21% and less than 2%, respectively
 
 
 
